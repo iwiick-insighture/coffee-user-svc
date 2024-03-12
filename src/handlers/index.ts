@@ -69,11 +69,18 @@ export const addUserHandler = async (req: Request, res: Response) => {
   try {
     const id = getPrefixedUUID();
     const newUser = req.body;
-    const data = await addUser({ ...newUser, id });
-    res.status(HttpStatusCode.Ok).json({
-      message: `Added New User`,
-      data,
-    } as ApiResponse);
+    const exists = await doesUserExist(newUser.email);
+    if (exists) {
+      res.status(HttpStatusCode.Ok).json({
+        message: `User with ${newUser.email} is already registered`,
+      } as ApiResponse);
+    } else {
+      const data = await addUser({ ...newUser, id });
+      res.status(HttpStatusCode.Ok).json({
+        message: `Added New User`,
+        data,
+      } as ApiResponse);
+    }
   } catch (err) {
     res.status(HttpStatusCode.BadRequest).json({
       error: err,
