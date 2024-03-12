@@ -1,5 +1,5 @@
 # coffee-user-svc
-A simple Coffee Service
+A simple Coffee Service User Authentication Service
 
 Create a `config.json` file inside `src/configs` to start
 
