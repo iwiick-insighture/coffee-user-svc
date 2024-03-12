@@ -1,0 +1,177 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: coffee-user-svc API
+basePath: "{{base_url}}"
+schemes:
+  - http
+paths:
+  /health:
+    get:
+      summary: Get Health
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+  /user_{userId}:
+    get:
+      summary: Get User By Id
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  email:
+                    type: string
+                  password:
+                    type: string
+    put:
+      summary: Update User By Id
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: object
+                properties:
+                  name:
+                    type: string
+    delete:
+      summary: Delete User By Id
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: string
+  /exists/{email}:
+    get:
+      summary: Does User Exist
+      parameters:
+        - name: email
+          in: path
+          required: true
+          type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: boolean
+  /:
+    post:
+      summary: Add new User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  email:
+                    type: string
+                  password:
+                    type: string
+  /authenticate:
+    post:
+      summary: Authenticate User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: object
+                properties:
+                  isAuthenticated:
+                    type: boolean
+                  name:
+                    type: string
+                  email:
+                    type: string
+                  userId:
+                    type: string

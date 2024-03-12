@@ -1,0 +1,542 @@
+{
+  "info": {
+    "_postman_id": "eb5a5fde-147c-4239-8970-b3c22340dccc",
+    "name": "coffee-user-svc",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29081713"
+  },
+  "item": [
+    {
+      "name": "Get Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Health",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "63"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3f-ZMiPICB2w6iVzzfmT6YnAQlBenE\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:03:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"coffee-user-svc is up and running on port :: 5001\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get User By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7",
+          "host": ["{{base_url}}"],
+          "path": ["user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get User By Id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7",
+              "host": ["{{base_url}}"],
+              "path": ["user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "234"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ea-kLS32yEtCqfeia+Mu5v5fydn/lU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:03:45 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User found by ID :: user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7\",\n    \"data\": {\n        \"id\": \"user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7\",\n        \"name\": \"iwiick\",\n        \"email\": \"hello@gmail.com\",\n        \"password\": \"8548405b64a9388ce14dd832becae7da:28267035fdd7\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Does User Exist",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/exists/hello@gmail.com",
+          "host": ["{{base_url}}"],
+          "path": ["exists", "hello@gmail.com"]
+        }
+      },
+      "response": [
+        {
+          "name": "Does User Exist",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/exists/hello@gmail.com",
+              "host": ["{{base_url}}"],
+              "path": ["exists", "hello@gmail.com"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "38"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"26-tSNv6gIX30OZqznYCbjWi465YRk\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:03:58 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Users Exists\",\n    \"data\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add new User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"iwiick2\",\r\n    \"email\": \"hello2@gmail.com\",\r\n    \"password\": \"iwiick2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": [""]
+        }
+      },
+      "response": [
+        {
+          "name": "Add new User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"iwiick2\",\r\n    \"email\": \"hello2@gmail.com\",\r\n    \"password\": \"iwiick2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "191"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"bf-tt1MXA+6wjsHnHGJVGfjGvUBxq0\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:04:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Added New User\",\n    \"data\": {\n        \"id\": \"user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f\",\n        \"name\": \"iwiick2\",\n        \"email\": \"hello2@gmail.com\",\n        \"password\": \"8f25e941c1d06b3da15b827c477a93c2:148cf4c69dd63b\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Authenticate User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"hello@gmail.com\",\r\n    \"password\": \"iwiick\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/authenticate",
+          "host": ["{{base_url}}"],
+          "path": ["authenticate"]
+        }
+      },
+      "response": [
+        {
+          "name": "Authenticate User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"hello@gmail.com\",\r\n    \"password\": \"iwiick\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/authenticate",
+              "host": ["{{base_url}}"],
+              "path": ["authenticate"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "160"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"a0-vQ+hxqjh0IKRniLK8Z0LL17r844\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:04:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Users Authenticated\",\n    \"data\": {\n        \"isAuthenticated\": true,\n        \"name\": \"iwiick\",\n        \"email\": \"hello@gmail.com\",\n        \"userId\": \"user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update User By Id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"iwiick-awesome\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7",
+          "host": ["{{base_url}}"],
+          "path": ["user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7"]
+        }
+      },
+      "response": [
+        {
+          "name": "Update User By Id",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"iwiick-awesome\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7",
+              "host": ["{{base_url}}"],
+              "path": ["user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "104"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"68-Y2thFjtAkGUqurRWBVPX59Iej+c\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:05:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Updated User :: user_7e1ffca4-ae7e-483b-816d-f5e6702ceda7\",\n    \"data\": {\n        \"name\": \"iwiick-awesome\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete User By Id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f",
+          "host": ["{{base_url}}"],
+          "path": ["user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f"]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete User By Id",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f",
+              "host": ["{{base_url}}"],
+              "path": ["user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "122"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7a-P1BgnvGXmHSZ+8nJcliB7uq3mag\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 12 Mar 2024 10:05:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User Deleted :: user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f\",\n    \"data\": \"user_a98966de-bf66-43a7-b3d8-7e1d71acaa2f\"\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5001",
+      "type": "string"
+    }
+  ]
+}
