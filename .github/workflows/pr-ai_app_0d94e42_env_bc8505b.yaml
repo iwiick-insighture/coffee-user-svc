@@ -83,7 +83,8 @@ jobs:
                   echo "payload: $payload"
 
                   response=$(curl -X POST -d "$payload"  -H 'Authorization: ${{ env.SERVICE_ACC_ACCESS_TOKEN }}' -H 'x-auth-by: sa' -H 'x-organization-id: ${{ env.PIPELINE_ORGANIZATION_ID }}' -H 'x-project-id: ${{ env.PIPELINE_PROJECT_ID }}' -H 'x-trace-id: ${{ env.PIPELINE_TRACE_ID }}' -H 'x-resource-id: ${{ env.PIPELINE_APPLICATION_ID }}' -H 'Content-Type: multipart/form-data'  '${{ env.API_GATEWAY_BASEURL }}/ai-suggested-solution-service/identify-files/')
-
+                  echo "RESPONSE: $response"
+                  
                   status_code=$?
                   if [ $status_code -eq 0 ]; then
                     echo "SUCCESS :: $response"
@@ -102,7 +103,9 @@ jobs:
           FILE_NAME: ${{ steps.send-logs.outputs.identified-files }}
           FILE_PATH: ${{ steps.send-logs.outputs.identified-files }}
         run: |2-
-
+                  echo "FILE_PATH: ${{ env.FILE_PATH }}"
+                  echo "FILE_PATH direct: $FILE_PATH"
+                  
                   file_content=$(cat "$FILE_PATH")
                   payload=$(jq -n --arg fileName "$FILE_NAME" --arg fileContent "$file_content" --arg logs ${{ env.LOGS }} '{"file_contents": {($fileName): $fileContent}, "error_message": $logs}')
                   echo "payload: $payload"
